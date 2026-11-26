@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABCD School — Kindergarten to Grade 12 | Addis Ababa</title>
+<meta name="description" content="ABCD School — a warm, ambitious K-12 community in Addis Ababa. Expert faculty, modern facilities, and genuine care for every child. Admissions open for 2025/26.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0B1B3A">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ABCD School — Kindergarten to Grade 12">
+<meta property="og:description" content="A warm, ambitious K-12 community in Addis Ababa. Expert faculty, modern facilities, genuine care.">
+<meta property="og:site_name" content="ABCD School">
+<meta property="og:locale" content="en_ET">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ABCD School — K-12 in Addis Ababa">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230B1B3A'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Inter,sans-serif' font-size='34' font-weight='800' fill='%23E8B65B'%3EABCD%3C/text%3E%3C/svg%3E">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "School",
+  "name": "ABCD School",
+  "description": "A Kindergarten through Grade 12 school in Addis Ababa, Ethiopia.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Addis Ababa",
+    "addressCountry": "ET"
+  },
+  "telephone": "+251-91-234-5678",
+  "email": "info@abcdschool.et",
+  "foundingDate": "2010",
+  "numberOfStudents": 1200
+}
+</script>
+
+<style>
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+:root{
+  --bg:#FDFBF7; --bg-alt:#F7F3EA; --surface:#FFFFFF;
+  --ink:#0B1B3A; --ink-2:#4A5568; --ink-3:#8B95A5;
+  --border:#EAE4D5; --border-2:#DBD3C0;
+  --gold:#E8B65B; --gold-dark:#C99835;
+  --accent:#F5A623; --accent-dark:#D97706; --accent-soft:#FEF3C7;
+  --success:#10B981; --success-soft:#D1FAE5; --success-dark:#065F46;
+  --danger:#EF4444;
+  --dark-bg:#0B1B3A; --on-dark:#FFFFFF; --on-dark-2:rgba(255,255,255,.7);
+  --font-display:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --radius:20px; --radius-sm:12px; --radius-lg:32px;
+  --shadow-sm:0 1px 2px rgba(11,27,58,.05);
+  --shadow:0 4px 20px rgba(11,27,58,.06);
+  --shadow-lg:0 20px 60px rgba(11,27,58,.12);
+  --shadow-xl:0 30px 80px rgba(11,27,58,.18);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --ease-spring:cubic-bezier(.34,1.56,.64,1);
+}
+[data-theme="dark"]{
+  --bg:#0B0F19; --bg-alt:#111827; --surface:#1A2234;
+  --ink:#F1F5F9; --ink-2:#94A3B8; --ink-3:#64748B;
+  --border:#1E293B; --border-2:#334155;
+  --accent-soft:rgba(245,166,35,.15);
+  --success-soft:rgba(16,185,129,.15); --success-dark:#34D399;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.3);
+  --shadow:0 4px 20px rgba(0,0,0,.3);
+  --shadow-lg:0 20px 60px rgba(0,0,0,.4);
+  --shadow-xl:0 30px 80px rgba(0,0,0,.5);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body); background:var(--bg); color:var(--ink);
+  line-height:1.65; overflow-x:hidden;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  transition:background .3s var(--ease), color .3s var(--ease);
+}
+body::before{
+  content:''; position:fixed; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity:.022; pointer-events:none; z-index:9998;
+}
+a{color:inherit;text-decoration:none;cursor:pointer}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--accent);color:#0B1B3A}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip-link{
+  position:fixed;top:-100px;left:16px;z-index:10000;
+  background:var(--ink);color:var(--surface);
+  padding:12px 20px;border-radius:10px;font-weight:600;font-size:.9rem;
+  transition:top .2s var(--ease);
+}
+.skip-link:focus{top:16px;outline:2px solid var(--accent);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms !important;animation-iteration-count:1 !important;
+    transition-duration:0.01ms !important;scroll-behavior:auto !important;
+  }
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1,h2,h3,h4{letter-spacing:-.02em;line-height:1.15}
+h1{font-family:var(--font-display);font-size:clamp(2.8rem,5.5vw,5rem);font-weight:400;line-height:1.03;letter-spacing:-.03em}
+h1 em{font-style:italic;color:var(--accent);font-weight:400}
+h2{font-family:var(--font-display);font-size:clamp(2rem,3.8vw,3.2rem);font-weight:400;line-height:1.1;letter-spacing:-.02em}
+h3{font-family:var(--font-body);font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+p{color:var(--ink-2);font-size:1rem;line-height:1.7}
+kbd{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:.72rem;padding:2px 6px;border-radius:5px;background:var(--bg-alt);border:1px solid var(--border);color:var(--ink-2);font-weight:500}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.container{max-width:1240px;margin:0 auto;padding:0 28px}
+section{padding:110px 0}
+.section-head{max-width:720px;margin:0 auto 64px;text-align:center}
+.section-head.left{text-align:left;margin-left:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--accent-soft);color:var(--accent-dark);border-radius:50px;font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:20px}
+.section-head h2{margin-bottom:18px}
+.section-head p{font-size:1.05rem;max-width:600px;margin:0 auto}
+.section-head.left p{margin-left:0}
+
+/* ============================================
+   PROGRESS BAR
+   ============================================ */
+.progress{position:fixed;top:0;left:0;height:2px;background:var(--accent);width:0%;z-index:9999;transition:width .1s linear}
+
+/* ============================================
+   ANNOUNCEMENT
+   ============================================ */
+.announce{background:var(--dark-bg);color:var(--on-dark);padding:10px 0;font-size:.82rem;text-align:center;position:relative;z-index:1001}
+.announce .container{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.announce strong{color:var(--gold);font-weight:700}
+.announce a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+.announce a:hover{color:#fff}
+
+/* ============================================
+   NAV
+   ============================================ */
+.nav{position:sticky;top:0;background:rgba(253,251,247,.88);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--border);z-index:1000;transition:all .3s var(--ease)}
+[data-theme="dark"] .nav{background:rgba(11,15,25,.88)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:800;font-size:1.15rem;color:var(--ink);letter-spacing:-.02em;flex-shrink:0}
+.logo-mark{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--dark-bg);color:var(--gold);font-size:.7rem;font-weight:800;letter-spacing:.04em}
+.nav-menu{display:flex;gap:4px;align-items:center;list-style:none}
+.nav-menu a{padding:9px 14px;border-radius:10px;font-size:.9rem;font-weight:500;color:var(--ink-2);transition:all .2s var(--ease);position:relative}
+.nav-menu a:hover{color:var(--ink);background:var(--bg-alt)}
+.nav-menu a.active{background:var(--ink);color:var(--bg)}
+[data-theme="dark"] .nav-menu a.active{background:var(--accent);color:#0B1B3A}
+.nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.cmdk-trigger,.theme-toggle{display:flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:10px;background:var(--bg-alt);border:1px solid var(--border);color:var(--ink-2);font-size:.85rem;font-weight:500;transition:all .2s var(--ease)}
+.cmdk-trigger:hover,.theme-toggle:hover{background:var(--surface);border-color:var(--border-2);color:var(--ink)}
+.cmdk-trigger svg{width:16px;height:16px;opacity:.7}
+.cmdk-trigger kbd{margin-left:4px}
+.theme-toggle{width:40px;padding:0;justify-content:center;font-size:1rem;position:relative}
+.theme-toggle .icon-sun,.theme-toggle .icon-moon{position:absolute;transition:all .3s var(--ease-spring)}
+[data-theme="light"] .icon-moon{opacity:0;transform:rotate(-90deg) scale(.5)}
+[data-theme="light"] .icon-sun{opacity:1;transform:rotate(0) scale(1)}
+[data-theme="dark"] .icon-sun{opacity:0;transform:rotate(90deg) scale(.5)}
+[data-theme="dark"] .icon-moon{opacity:1;transform:rotate(0) scale(1)}
+.nav-toggle{display:none;width:40px;height:40px;border-radius:10px;align-items:center;justify-content:center;color:var(--ink);background:var(--bg-alt)}
+.nav-toggle svg{width:20px;height:20px}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:12px;font-family:var(--font-body);font-size:.95rem;font-weight:600;letter-spacing:-.01em;transition:all .25s var(--ease);cursor:pointer;border:1.5px solid transparent;white-space:nowrap}
+.btn span{transition:transform .25s var(--ease)}
+.btn:hover span{transform:translateX(4px)}
+.btn:active{transform:scale(.98)}
+.btn-sm{padding:10px 20px;font-size:.88rem}
+.btn-primary{background:var(--ink);color:var(--bg)}
+[data-theme="dark"] .btn-primary{background:var(--accent);color:#0B1B3A}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(11,27,58,.22)}
+.btn-accent{background:var(--accent);color:#0B1B3A}
+.btn-accent:hover{background:var(--accent-dark);color:#fff;transform:translateY(-2px);box-shadow:0 12px 28px rgba(245,166,35,.3)}
+.btn-outline{background:transparent;color:var(--ink);border-color:var(--border-2)}
+.btn-outline:hover{background:var(--ink);color:var(--bg);border-color:var(--ink);transform:translateY(-2px)}
+
+/* ============================================
+   PAGES
+   ============================================ */
+.page{display:none}
+.page.active{display:block;animation:pageIn .45s var(--ease)}
+@keyframes pageIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero{position:relative;padding:60px 0 100px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55}
+.orb-1{width:560px;height:560px;background:radial-gradient(circle,#FFE4B5,transparent 70%);top:-200px;right:-100px}
+.orb-2{width:480px;height:480px;background:radial-gradient(circle,#E0E7FF,transparent 70%);bottom:-200px;left:-100px}
+.orb-3{width:300px;height:300px;background:radial-gradient(circle,#FCE7F3,transparent 70%);top:40%;left:40%;opacity:.4}
+[data-theme="dark"] .orb{opacity:.25}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.hero-content{max-width:600px}
+.hero-content > *{animation:heroIn .8s var(--ease) both}
+.hero-content > *:nth-child(1){animation-delay:.05s}
+.hero-content > *:nth-child(2){animation-delay:.15s}
+.hero-content > *:nth-child(3){animation-delay:.25s}
+.hero-content > *:nth-child(4){animation-delay:.35s}
+.hero-content > *:nth-child(5){animation-delay:.45s}
+@keyframes heroIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;background:var(--surface);border:1px solid var(--border);border-radius:50px;font-size:.82rem;font-weight:600;color:var(--ink-2);margin-bottom:24px;box-shadow:var(--shadow-sm)}
+.badge-dot{width:8px;height:8px;border-radius:50%;background:var(--success);box-shadow:0 0 0 3px rgba(16,185,129,.15);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.hero h1{margin-bottom:24px}
+.hero-lead{font-size:1.12rem;color:var(--ink-2);margin-bottom:36px;max-width:540px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}
+.hero-stats{display:flex;gap:40px;padding-top:32px;border-top:1px solid var(--border);max-width:480px}
+.hero-stats>div{display:flex;flex-direction:column;gap:2px}
+.hero-stats strong{font-family:var(--font-display);font-size:2rem;font-weight:400;color:var(--ink);line-height:1}
+.hero-stats span{font-size:.82rem;color:var(--ink-3);font-weight:500}
+
+.hero-visual{position:relative;height:520px;display:flex;align-items:center;justify-content:center}
+.visual-glow{position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(245,166,35,.25),transparent 70%);border-radius:50%;filter:blur(40px)}
+.visual-dots{position:absolute;inset:20px;background-image:radial-gradient(circle,var(--border-2) 1px,transparent 1px);background-size:24px 24px;border-radius:50%;mask-image:radial-gradient(circle,black 40%,transparent 70%);-webkit-mask-image:radial-gradient(circle,black 40%,transparent 70%);opacity:.6}
+.main-card{position:relative;z-index:3;width:320px;background:var(--surface);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-xl);border:1px solid var(--border)}
+.main-card-header{display:flex;gap:6px;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.main-card-header span{width:9px;height:9px;border-radius:50%}
+.dot-red{background:#FF5F56}.dot-yellow{background:#FFBD2E}.dot-green{background:#27C93F}
+.main-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:600;margin-bottom:6px}
+.main-title{font-size:.92rem;font-weight:600;color:var(--ink-2);margin-bottom:12px}
+.main-big{font-family:var(--font-display);font-size:3rem;font-weight:400;line-height:1;color:var(--ink);margin-bottom:14px}
+.main-big small{font-family:var(--font-body);font-size:.9rem;font-weight:500;color:var(--success);margin-left:8px;letter-spacing:0}
+.progress-track{height:8px;background:var(--bg-alt);border-radius:50px;overflow:hidden;margin-bottom:12px}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));border-radius:50px;animation:fillBar 1.4s var(--ease) both}
+@keyframes fillBar{from{width:0}to{width:98%}}
+.main-footer{font-size:.78rem;color:var(--ink-3);display:flex;align-items:center;gap:6px}
+.main-footer .up{color:var(--success);font-weight:700}
+
+.float-card{position:absolute;background:var(--surface);border-radius:16px;padding:14px 18px;box-shadow:var(--shadow-lg);border:1px solid var(--border);display:flex;align-items:center;gap:12px;animation:floatY 6s ease-in-out infinite;z-index:4}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.float-1{top:20px;right:0;animation-delay:0s}
+.float-2{bottom:120px;right:-20px;animation-delay:2s}
+.float-3{bottom:20px;left:0;animation-delay:4s}
+.float-icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--bg-alt);font-size:1.1rem}
+.float-num{font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.2}
+.float-label{font-size:.74rem;color:var(--ink-3);font-weight:500}
+.float-2-inner{display:flex;flex-direction:column;gap:2px}
+
+/* ============================================
+   MANIFESTO
+   ============================================ */
+.manifesto{padding:80px 0;background:var(--dark-bg);color:var(--on-dark);position:relative;overflow:hidden}
+.manifesto::before{content:'';position:absolute;width:500px;height:500px;top:-200px;right:-150px;border-radius:50%;background:radial-gradient(circle,rgba(232,182,91,.15),transparent 70%)}
+.manifesto .container{position:relative;z-index:1;max-width:900px;text-align:center}
+.manifesto p{font-family:var(--font-display);font-size:clamp(1.5rem,2.8vw,2.2rem);line-height:1.35;color:var(--on-dark);font-weight:400;font-style:italic}
+.manifesto p em{color:var(--gold);font-style:italic}
+.manifesto .attribution{margin-top:24px;font-family:var(--font-body);font-style:normal;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600}
+
+/* ============================================
+   TRUST STRIP
+   ============================================ */
+.trust{padding:44px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-alt)}
+.trust-inner{display:flex;align-items:center;justify-content:center;gap:64px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px;color:var(--ink-3);font-size:.88rem;font-weight:600;letter-spacing:.02em;opacity:.75;transition:opacity .25s}
+.trust-item:hover{opacity:1}
+.trust-icon{font-size:1.2rem}
+
+/* ============================================
+   COUNTER DASHBOARD
+   ============================================ */
+.counter-dash{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.counter-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;text-align:left;transition:all .3s var(--ease)}
+.counter-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--border-2)}
+.counter-top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.counter-icon{width:36px;height:36px;border-radius:10px;background:var(--bg-alt);display:grid;place-items:center;font-size:1rem}
+.counter-label{font-size:.8rem;color:var(--ink-3);font-weight:600;letter-spacing:.02em}
+.counter-value{font-family:var(--font-display);font-size:2.8rem;line-height:1;font-weight:400;color:var(--ink);margin-bottom:6px}
+.counter-value .suffix{color:var(--accent-dark)}
+.counter-meta{font-size:.8rem;color:var(--success);font-weight:600}
+
+/* ============================================
+   SPLIT
+   ============================================ */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.split.reverse{direction:rtl}
+.split.reverse>*{direction:ltr}
+.split h2{margin-bottom:22px}
+.split p{margin-bottom:16px;font-size:1.02rem}
+.check-list{list-style:none;margin-top:28px;display:flex;flex-direction:column;gap:14px}
+.check-list li{display:flex;gap:14px;align-items:flex-start;font-size:.96rem;color:var(--ink-2)}
+.check-list .check{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent-dark);display:grid;place-items:center;font-size:.78rem;font-weight:800;margin-top:1px}
+.visual-block{position:relative;height:520px}
+.visual-card-main{position:absolute;inset:0;background:linear-gradient(135deg,var(--dark-bg) 0%,#1e3a8a 100%);border-radius:var(--radius);overflow:hidden;display:flex;align-items:flex-end;padding:40px;box-shadow:var(--shadow-lg);border:1px solid var(--border)}
+.visual-card-main::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 30% 20%,rgba(232,182,91,.4),transparent 50%),radial-gradient(circle at 70% 80%,rgba(245,166,35,.3),transparent 50%)}
+.visual-card-main-inner{position:relative;z-index:1;color:var(--on-dark)}
+.visual-card-main-inner .icon{font-size:3rem;margin-bottom:16px}
+.visual-card-main-inner h3{font-family:var(--font-display);font-size:2rem;font-weight:400;color:var(--on-dark);margin-bottom:6px;letter-spacing:-.02em}
+.visual-card-main-inner p{color:var(--on-dark-2);font-size:.92rem;margin:0}
+.visual-badge{position:absolute;bottom:-24px;right:-24px;background:var(--surface);border-radius:20px;padding:24px 28px;box-shadow:var(--shadow-lg);border:1px solid var(--border);display:flex;align-items:center;gap:16px;z-index:2}
+.visual-badge-icon{width:52px;height:52px;border-radius:14px;background:var(--accent-soft);display:grid;place-items:center;font-size:1.5rem}
+.visual-badge-num{font-family:var(--font-display);font-size:1.8rem;font-weight:400;line-height:1;color:var(--ink)}
+.visual-badge-label{font-size:.8rem;color:var(--ink-3);font-weight:500}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.grid{display:grid;gap:24px}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:36px 30px;transition:all .3s var(--ease);position:relative;overflow:hidden}
+.card:hover{border-color:var(--border-2);transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card-icon{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;background:var(--bg-alt);font-size:1.5rem;margin-bottom:22px;transition:all .3s var(--ease)}
+.card:hover .card-icon{background:var(--accent-soft);transform:scale(1.08) rotate(-4deg)}
+.card h3{margin-bottom:10px;font-size:1.1rem}
+.card p{font-size:.94rem;color:var(--ink-2);line-height:1.65}
+
+/* ============================================
+   PROGRAMS
+   ============================================ */
+.program{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .3s var(--ease);display:flex;flex-direction:column}
+.program:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--border-2)}
+.program-head{padding:28px;background:linear-gradient(135deg,var(--dark-bg),#1e3a8a);color:var(--on-dark);position:relative;overflow:hidden}
+.program:nth-child(2) .program-head{background:linear-gradient(135deg,#7C2D12,#B45309)}
+.program:nth-child(3) .program-head{background:linear-gradient(135deg,#065F46,#059669)}
+.program:nth-child(4) .program-head{background:linear-gradient(135deg,#4C1D95,#6D28D9)}
+.program-head::after{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.15),transparent 70%);top:-60px;right:-60px}
+.program-num{font-family:var(--font-display);font-size:.9rem;opacity:.6;margin-bottom:6px;letter-spacing:.05em}
+.program-level{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;opacity:.75;margin-bottom:8px;font-weight:600}
+.program-head h3{font-family:var(--font-display);font-size:1.7rem;font-weight:400;color:var(--on-dark);letter-spacing:-.02em;position:relative;z-index:1}
+.program-head h3+span{font-size:.85rem;opacity:.7;position:relative;z-index:1;color:var(--on-dark)}
+.program-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;position:relative;z-index:1}
+.program-tag{font-size:.7rem;padding:3px 10px;border-radius:50px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);font-weight:500;letter-spacing:.02em}
+.program-body{padding:24px 28px 28px;flex:1;display:flex;flex-direction:column}
+.program-body ul{list-style:none;margin-bottom:20px;flex:1}
+.program-body li{padding:8px 0 8px 26px;position:relative;font-size:.9rem;color:var(--ink-2);border-bottom:1px dashed var(--border)}
+.program-body li:last-child{border-bottom:none}
+.program-body li::before{content:'✓';position:absolute;left:0;color:var(--accent-dark);font-weight:800;font-size:.85rem}
+.program-link{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-weight:600;font-size:.9rem;transition:gap .2s}
+.program-link:hover{gap:12px}
+
+/* ============================================
+   GALLERY
+   ============================================ */
+.gallery-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:36px}
+.gallery-tab{padding:9px 18px;border-radius:50px;font-size:.85rem;font-weight:600;color:var(--ink-2);background:var(--surface);border:1px solid var(--border);transition:all .2s var(--ease)}
+.gallery-tab:hover{border-color:var(--border-2);color:var(--ink)}
+.gallery-tab.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+[data-theme="dark"] .gallery-tab.active{background:var(--accent);color:#0B1B3A;border-color:var(--accent)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.gallery-item{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1;cursor:pointer;transition:all .4s var(--ease)}
+.gallery-item:hover{transform:scale(1.03);box-shadow:var(--shadow-lg)}
+.gallery-item.hidden{display:none}
+.gallery-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;color:#fff}
+.gallery-emoji{font-size:2.8rem;margin-bottom:10px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.2))}
+.gallery-title{font-size:.9rem;font-weight:700;letter-spacing:-.01em}
+.gallery-sub{font-size:.72rem;opacity:.8;margin-top:2px}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,27,58,.6),transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:16px;color:#fff;font-size:.78rem;font-weight:600}
+.gallery-item:hover .gallery-overlay{opacity:1}
+
+/* ============================================
+   TEACHERS + FILTER
+   ============================================ */
+.faculty-filter{max-width:520px;margin:0 auto 40px;position:relative}
+.faculty-filter input{width:100%;padding:14px 18px 14px 46px;border-radius:12px;border:1.5px solid var(--border);background:var(--surface);color:var(--ink);font-family:inherit;font-size:.95rem;transition:all .2s var(--ease)}
+.faculty-filter input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 4px rgba(11,27,58,.08)}
+[data-theme="dark"] .faculty-filter input:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(245,166,35,.15)}
+.faculty-filter svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--ink-3);pointer-events:none}
+.faculty-empty{text-align:center;padding:48px 24px;color:var(--ink-3);display:none}
+.faculty-empty.show{display:block}
+.teacher{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px 24px;text-align:center;transition:all .3s var(--ease)}
+.teacher:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--border-2)}
+.teacher.hidden{display:none}
+.teacher-avatar{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;font-size:2.2rem;margin:0 auto 18px;background:linear-gradient(135deg,var(--bg-alt),var(--border-2));border:3px solid var(--surface);box-shadow:0 0 0 1px var(--border),0 8px 20px rgba(11,27,58,.08);transition:transform .3s var(--ease)}
+.teacher:hover .teacher-avatar{transform:scale(1.06)}
+.teacher h3{font-size:1rem;margin-bottom:4px}
+.teacher-role{color:var(--accent-dark);font-size:.82rem;font-weight:600;margin-bottom:8px;letter-spacing:.01em}
+.teacher-meta{font-size:.8rem;color:var(--ink-3);line-height:1.5}
+
+/* ============================================
+   TESTIMONIALS CAROUSEL
+   ============================================ */
+.testimonial-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:12px}
+.testimonial-track::-webkit-scrollbar{display:none}
+.testimonial-track .testimonial{min-width:100%;scroll-snap-align:start}
+@media(min-width:768px){.testimonial-track .testimonial{min-width:calc(50% - 12px)}}
+@media(min-width:1024px){.testimonial-track .testimonial{min-width:calc(33.333% - 16px)}}
+.testimonial{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:36px 32px;position:relative;transition:all .3s var(--ease)}
+.testimonial:hover{box-shadow:var(--shadow-lg)}
+.quote-mark{font-family:var(--font-display);font-size:4.5rem;line-height:.5;color:var(--gold);margin-bottom:8px;display:block;letter-spacing:-.05em}
+.testimonial-text{font-size:1rem;line-height:1.7;color:var(--ink);margin-bottom:24px;font-weight:400}
+.testimonial-author{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--border)}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:var(--bg-alt);display:grid;place-items:center;font-size:1.1rem;flex-shrink:0}
+.testimonial-name{font-size:.9rem;font-weight:700;color:var(--ink);line-height:1.3}
+.testimonial-role{font-size:.78rem;color:var(--ink-3);line-height:1.3}
+.testimonial-dots{display:flex;gap:8px;justify-content:center;margin-top:28px}
+.testimonial-dot{width:8px;height:8px;border-radius:50%;background:var(--border-2);transition:all .25s var(--ease);padding:0}
+.testimonial-dot.active{background:var(--accent);width:24px;border-radius:4px}
+
+/* ============================================
+   CTA BANNER
+   ============================================ */
+.cta-banner{background:var(--dark-bg);color:var(--on-dark);padding:100px 0;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;width:600px;height:600px;top:-250px;right:-200px;border-radius:50%;background:radial-gradient(circle,rgba(232,182,91,.25),transparent 70%)}
+.cta-banner::after{content:'';position:absolute;width:400px;height:400px;bottom:-200px;left:-100px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.05),transparent 70%)}
+.cta-banner .container{position:relative;z-index:1}
+.cta-banner h2{color:var(--on-dark);margin-bottom:16px;max-width:720px;margin-left:auto;margin-right:auto}
+.cta-banner h2 em{color:var(--gold);font-style:italic}
+.cta-banner p{color:var(--on-dark-2);font-size:1.05rem;margin-bottom:36px;max-width:560px;margin-left:auto;margin-right:auto}
+.cta-banner .btn{background:var(--accent);color:#0B1B3A}
+.cta-banner .btn:hover{background:var(--gold);transform:translateY(-2px)}
+
+/* ============================================
+   PAGE HEAD
+   ============================================ */
+.page-head{padding:90px 0 70px;text-align:center;background:var(--bg-alt);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.page-head::before{content:'';position:absolute;width:400px;height:400px;top:-200px;right:-100px;border-radius:50%;background:radial-gradient(circle,rgba(232,182,91,.25),transparent 70%)}
+.page-head::after{content:'';position:absolute;width:300px;height:300px;bottom:-150px;left:-100px;border-radius:50%;background:radial-gradient(circle,rgba(59,91,219,.12),transparent 70%)}
+.page-head .container{position:relative;z-index:1}
+.page-head h1{font-size:clamp(2.4rem,4.5vw,3.8rem);margin-bottom:14px}
+.page-head p{font-size:1.05rem;color:var(--ink-2);max-width:560px;margin:0 auto}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline{max-width:680px;margin:0 auto;position:relative;padding-left:36px}
+.timeline::before{content:'';position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:var(--border-2)}
+.timeline-item{position:relative;padding-bottom:40px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{content:'';position:absolute;left:-36px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--surface);border:3px solid var(--accent);box-shadow:0 0 0 4px var(--bg)}
+.timeline-year{font-family:var(--font-display);font-size:1.4rem;color:var(--accent-dark);line-height:1;margin-bottom:6px;font-weight:400}
+.timeline-item h4{font-size:1rem;font-weight:700;margin-bottom:6px;color:var(--ink)}
+.timeline-item p{font-size:.93rem;color:var(--ink-2);margin:0}
+
+/* ============================================
+   STEPS
+   ============================================ */
+.step{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:36px 28px;text-align:center;position:relative;transition:all .3s var(--ease)}
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--border-2)}
+.step-num{width:56px;height:56px;border-radius:50%;background:var(--dark-bg);color:var(--gold);display:grid;place-items:center;font-family:var(--font-display);font-size:1.5rem;font-weight:400;margin:0 auto 20px;box-shadow:0 8px 20px rgba(11,27,58,.2)}
+.step h3{font-size:1.05rem;margin-bottom:10px}
+.step p{font-size:.9rem;color:var(--ink-2);margin:0}
+
+/* ============================================
+   FORMS
+   ============================================ */
+.form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow)}
+.form-card h3{font-family:var(--font-display);font-size:1.8rem;font-weight:400;margin-bottom:8px;letter-spacing:-.02em}
+.form-card>p{font-size:.92rem;color:var(--ink-3);margin-bottom:28px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-group{display:flex;flex-direction:column;gap:7px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:.85rem;font-weight:600;color:var(--ink)}
+.form-group input,.form-group select,.form-group textarea{padding:13px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:inherit;font-size:.94rem;color:var(--ink);background:var(--surface);transition:all .2s var(--ease);width:100%}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--ink-3)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 4px rgba(11,27,58,.08)}
+[data-theme="dark"] .form-group input:focus,[data-theme="dark"] .form-group select:focus,[data-theme="dark"] .form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(245,166,35,.15)}
+.form-group textarea{resize:vertical;min-height:110px;font-family:inherit}
+.form-group .field-error{border-color:var(--danger) !important;box-shadow:0 0 0 4px rgba(239,68,68,.1) !important}
+.error-msg{color:var(--danger);font-size:.78rem;margin-top:4px;font-weight:500;display:none}
+.error-msg.show{display:block;animation:pageIn .2s var(--ease)}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact-item{display:flex;gap:18px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--border)}
+.contact-item:last-child{border-bottom:none}
+.contact-item-icon{width:48px;height:48px;border-radius:12px;background:var(--bg-alt);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0}
+.contact-item h4{font-size:.88rem;color:var(--ink-3);font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.contact-item p{font-size:.96rem;color:var(--ink);margin:0;line-height:1.5;font-weight:500}
+
+/* ============================================
+   FAQ
+   ============================================ */
+.faq-search{max-width:520px;margin:0 auto 40px;position:relative}
+.faq-search input{width:100%;padding:14px 18px 14px 46px;border-radius:12px;border:1.5px solid var(--border);background:var(--surface);color:var(--ink);font-family:inherit;font-size:.95rem;transition:all .2s var(--ease)}
+.faq-search input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 4px rgba(11,27,58,.08)}
+[data-theme="dark"] .faq-search input:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(245,166,35,.15)}
+.faq-search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--ink-3);pointer-events:none}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .25s var(--ease)}
+.faq-item:hover{border-color:var(--border-2)}
+.faq-item.hidden{display:none}
+.faq-q{width:100%;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;font-family:inherit;font-size:.98rem;font-weight:600;color:var(--ink);background:none;border:none;cursor:pointer}
+.faq-q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--accent-dark);transition:transform .3s var(--ease);flex-shrink:0;line-height:1}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s var(--ease),padding .35s var(--ease);padding:0 26px}
+.faq-a p{font-size:.9rem;color:var(--ink-2);margin:0 0 22px 0;line-height:1.65}
+.faq-item.open .faq-a{max-height:300px}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer{background:var(--dark-bg);color:rgba(255,255,255,.65);padding:70px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-brand .logo{color:var(--on-dark);margin-bottom:16px}
+.footer-brand .logo-mark{background:rgba(255,255,255,.1);color:var(--gold)}
+.footer-brand p{color:rgba(255,255,255,.55);font-size:.9rem;line-height:1.7;margin-bottom:20px;max-width:340px}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);display:grid;place-items:center;color:rgba(255,255,255,.7);font-size:.9rem;transition:all .2s}
+.footer-social a:hover{background:var(--accent);color:#0B1B3A}
+.footer-col h5{color:var(--on-dark);font-size:.88rem;font-weight:600;margin-bottom:16px;letter-spacing:.02em}
+.footer-col a,.footer-col p{display:block;color:rgba(255,255,255,.55);font-size:.88rem;margin-bottom:10px;transition:color .2s;line-height:1.5}
+.footer-col a:hover{color:var(--gold)}
+.newsletter{margin-top:20px}
+.newsletter form{display:flex;gap:6px;margin-top:10px}
+.newsletter input{flex:1;padding:10px 14px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--on-dark);font-family:inherit;font-size:.85rem;min-width:0}
+.newsletter input::placeholder{color:rgba(255,255,255,.4)}
+.newsletter input:focus{outline:none;border-color:var(--accent);background:rgba(255,255,255,.1)}
+.newsletter button{width:40px;height:40px;flex-shrink:0;border-radius:8px;background:var(--accent);color:#0B1B3A;display:grid;place-items:center;font-weight:700;transition:all .2s}
+.newsletter button:hover{background:var(--gold);transform:translateY(-1px)}
+.footer-bottom{padding-top:26px;text-align:center;font-size:.82rem;color:rgba(255,255,255,.4)}
+
+/* ============================================
+   FLOATING BUTTONS
+   ============================================ */
+.back-top{position:fixed;bottom:28px;right:28px;width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:1.1rem;box-shadow:0 10px 30px rgba(11,27,58,.3);opacity:0;visibility:hidden;transform:translateY(20px);transition:all .3s var(--ease);z-index:900}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.back-top:hover{background:var(--accent);color:#0B1B3A;transform:translateY(-3px)}
+.whatsapp-fab{position:fixed;bottom:88px;right:28px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:1.5rem;box-shadow:0 10px 30px rgba(37,211,102,.4);z-index:900;transition:all .3s var(--ease)}
+.whatsapp-fab:hover{transform:scale(1.08);box-shadow:0 14px 36px rgba(37,211,102,.5)}
+
+/* ============================================
+   STICKY MOBILE CTA
+   ============================================ */
+.sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--surface);border-top:1px solid var(--border);padding:12px 20px;z-index:950;box-shadow:0 -8px 24px rgba(11,27,58,.08)}
+.sticky-cta .btn{width:100%}
+
+/* ============================================
+   MODAL
+   ============================================ */
+.modal{position:fixed;inset:0;background:rgba(11,27,58,.7);backdrop-filter:blur(8px);z-index:9999;display:none;align-items:center;justify-content:center;padding:24px}
+.modal.open{display:flex;animation:pageIn .3s var(--ease)}
+.modal-inner{background:var(--surface);border-radius:var(--radius-lg);max-width:640px;width:100%;padding:48px 40px;position:relative;text-align:center;box-shadow:var(--shadow-xl);max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--bg-alt);display:grid;place-items:center;font-size:1.1rem;color:var(--ink);transition:all .2s}
+.modal-close:hover{background:var(--ink);color:var(--bg);transform:rotate(90deg)}
+.modal-inner h3{font-family:var(--font-display);font-size:2rem;font-weight:400;margin-bottom:12px;letter-spacing:-.02em}
+.modal-inner p{font-size:.95rem;color:var(--ink-2);margin-bottom:24px}
+.modal-steps{display:flex;flex-direction:column;gap:14px;text-align:left;margin-bottom:28px}
+.modal-step{display:flex;gap:14px;align-items:flex-start;padding:16px 20px;background:var(--bg-alt);border-radius:12px}
+.modal-step-num{width:28px;height:28px;border-radius:50%;background:var(--dark-bg);color:var(--gold);display:grid;place-items:center;font-size:.8rem;font-weight:700;flex-shrink:0}
+.modal-step p{font-size:.88rem;color:var(--ink-2);margin:0;line-height:1.5}
+
+/* ============================================
+   COMMAND PALETTE (⌘K)
+   ============================================ */
+.cmdk{position:fixed;inset:0;z-index:10000;display:none;align-items:flex-start;justify-content:center;padding-top:15vh}
+.cmdk.open{display:flex;animation:pageIn .2s var(--ease)}
+.cmdk-backdrop{position:absolute;inset:0;background:rgba(11,27,58,.5);backdrop-filter:blur(8px)}
+.cmdk-panel{position:relative;width:100%;max-width:580px;background:var(--surface);border-radius:16px;box-shadow:var(--shadow-xl);border:1px solid var(--border);overflow:hidden;margin:0 24px;animation:cmdkIn .25s var(--ease-spring)}
+@keyframes cmdkIn{from{opacity:0;transform:scale(.95) translateY(-10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.cmdk-input-wrap{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--border)}
+.cmdk-input-wrap svg{width:18px;height:18px;color:var(--ink-3);flex-shrink:0}
+.cmdk-input-wrap input{flex:1;border:none;background:none;font-family:inherit;font-size:.98rem;color:var(--ink);outline:none}
+.cmdk-input-wrap input::placeholder{color:var(--ink-3)}
+.cmdk-input-wrap kbd{flex-shrink:0}
+.cmdk-results{max-height:380px;overflow-y:auto;padding:8px}
+.cmdk-group-label{padding:8px 12px 4px;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}
+.cmdk-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;cursor:pointer;transition:background .15s}
+.cmdk-item[aria-selected="true"],.cmdk-item:hover{background:var(--bg-alt)}
+.cmdk-item-icon{width:32px;height:32px;border-radius:8px;background:var(--bg-alt);display:grid;place-items:center;font-size:.95rem;flex-shrink:0}
+.cmdk-item[aria-selected="true"] .cmdk-item-icon{background:var(--accent-soft)}
+.cmdk-item-content{flex:1;min-width:0}
+.cmdk-item-label{font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.3}
+.cmdk-item-desc{font-size:.76rem;color:var(--ink-3);line-height:1.3;margin-top:1px}
+.cmdk-item-type{font-size:.68rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em;font-weight:600;flex-shrink:0}
+.cmdk-empty{padding:48px 24px;text-align:center;color:var(--ink-3);font-size:.9rem}
+.cmdk-footer{display:flex;gap:16px;padding:10px 16px;border-top:1px solid var(--border);background:var(--bg-alt);font-size:.74rem;color:var(--ink-3)}
+.cmdk-footer span{display:flex;align-items:center;gap:6px}
+
+/* ============================================
+   TOAST
+   ============================================ */
+.toast-container{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:10001;display:flex;flex-direction:column;gap:10px;pointer-events:none;max-width:calc(100vw - 32px)}
+.toast{display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow-lg);min-width:280px;pointer-events:auto;animation:toastIn .35s var(--ease-spring)}
+@keyframes toastIn{from{opacity:0;transform:translateY(20px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+.toast.out{animation:toastOut .25s var(--ease) forwards}
+@keyframes toastOut{to{opacity:0;transform:translateY(10px) scale(.95)}}
+.toast-icon{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-weight:700}
+.toast-success .toast-icon{background:var(--success-soft);color:var(--success-dark)}
+.toast-error .toast-icon{background:rgba(239,68,68,.15);color:var(--danger)}
+.toast-info .toast-icon{background:var(--accent-soft);color:var(--accent-dark)}
+.toast-message{font-size:.9rem;color:var(--ink);font-weight:500;line-height:1.4}
+
+/* ============================================
+   COOKIE BANNER
+   ============================================ */
+.cookie-banner{position:fixed;bottom:24px;left:24px;right:24px;max-width:520px;z-index:9997;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 24px;box-shadow:var(--shadow-xl);display:none;animation:pageIn .4s var(--ease)}
+.cookie-banner.show{display:block}
+.cookie-banner p{font-size:.88rem;color:var(--ink-2);margin-bottom:16px;line-height:1.5}
+.cookie-banner .cookie-actions{display:flex;gap:10px;flex-wrap:wrap}
+.cookie-banner .btn{padding:9px 18px;font-size:.85rem}
+
+/* ============================================
+   REVEAL
+   ============================================ */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal.d1{transition-delay:.05s}.reveal.d2{transition-delay:.1s}.reveal.d3{transition-delay:.15s}.reveal.d4{transition-delay:.2s}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-visual{height:420px;max-width:520px;margin:0 auto;width:100%}
+  .split{gap:56px}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .counter-dash{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  section{padding:80px 0}
+  .container{padding:0 24px}
+  .split{grid-template-columns:1fr;gap:48px}
+  .split.reverse{direction:ltr}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .nav-menu{position:fixed;top:112px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--surface);padding:16px;gap:4px;border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);transform:translateY(-150%);transition:transform .35s var(--ease);max-height:calc(100vh - 112px);overflow-y:auto}
+  .nav-menu.open{transform:translateY(0)}
+  .nav-menu a{padding:14px 18px;border-radius:10px;font-size:.96rem}
+  .nav-toggle{display:flex}
+  .cmdk-trigger span,.cmdk-trigger kbd{display:none}
+  .cmdk-trigger{width:40px;padding:0;justify-content:center}
+  .hero{padding:40px 0 80px}
+  .hero-stats{gap:24px}
+  .visual-block{height:380px}
+  .form-grid{grid-template-columns:1fr}
+  .form-card{padding:28px}
+  .page-head{padding:70px 0 50px}
+  .cta-banner{padding:80px 0}
+  .sticky-cta{display:block}
+  body{padding-bottom:64px}
+  .cookie-banner{left:16px;right:16px;bottom:80px}
+}
+@media(max-width:600px){
+  .container{padding:0 20px}
+  section{padding:64px 0}
+  .hero-stats{flex-direction:row;flex-wrap:wrap;gap:20px 32px}
+  .hero-stats strong{font-size:1.6rem}
+  .hero-stats span{font-size:.75rem}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .counter-dash{grid-template-columns:1fr 1fr;gap:14px}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr;gap:36px}
+  .visual-badge{right:0;bottom:-16px;padding:18px 22px}
+  .visual-badge-num{font-size:1.4rem}
+  .main-card{width:100%;max-width:300px}
+  .float-card{padding:12px 16px}
+  .float-2{right:-10px}
+  .hero-visual{height:380px}
+  .testimonial{padding:28px 24px}
+  .card{padding:28px 24px}
+  .program-head{padding:24px}
+  .program-head h3{font-size:1.4rem}
+  .program-body{padding:20px 24px 24px}
+  .quote-mark{font-size:3.5rem}
+  .back-top{bottom:84px;right:20px;width:44px;height:44px}
+  .whatsapp-fab{bottom:140px;right:20px;width:50px;height:50px}
+  .page-head{padding:60px 0 44px}
+  .page-head h1{font-size:2rem}
+  h1{font-size:clamp(2.2rem,9vw,3rem)}
+  h2{font-size:clamp(1.8rem,6vw,2.4rem)}
+  .modal-inner{padding:32px 24px}
+  .cmdk{padding-top:8vh}
+  .toast-container{left:16px;right:16px;transform:none}
+  .toast{min-width:0;width:100%}
+}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:var(--ink-3)}
+
+/* Print */
+@media print{
+  .nav,.announce,.progress,.cmdk,.modal,.cookie-banner,.toast-container,.whatsapp-fab,.back-top,.sticky-cta,.hero-visual{display:none !important}
+  body{background:#fff;color:#000}
+  section{padding:24px 0}
+  .page{display:block !important}
+  a{text-decoration:underline}
+}
+</style>
+</head>
+<body>
+
+<!-- Skip link -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Announcement -->
+<div class="announce" role="status">
+  <div class="container">
+    <span>📢 <strong>Next intake: September 2025</strong> — limited seats available</span>
+    <a onclick="go('admissions')">Start your application →</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="logo" onclick="go('home')" aria-label="ABCD School home">
+      <span class="logo-mark">ABCD</span><span>School</span>
+    </a>
+    <nav class="nav-menu" id="navMenu" aria-label="Main">
+      <a onclick="go('home')" data-page="home">Home</a>
+      <a onclick="go('about')" data-page="about">About</a>
+      <a onclick="go('programs')" data-page="programs">Programs</a>
+      <a onclick="go('teachers')" data-page="teachers">Faculty</a>
+      <a onclick="go('admissions')" data-page="admissions">Admissions</a>
+      <a onclick="go('contact')" data-page="contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="cmdk-trigger" onclick="openCmdk()" aria-label="Search (Ctrl or Cmd K)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span>Search</span>
+        <kbd>⌘K</kbd>
+      </button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="icon-sun" aria-hidden="true">☀</span>
+        <span class="icon-moon" aria-hidden="true">☾</span>
+      </button>
+      <a class="btn btn-primary btn-sm" onclick="go('admissions')">Apply</a>
+      <button class="nav-toggle" onclick="document.getElementById('navMenu').classList.toggle('open')" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HOME ============ -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"><div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="badge"><span class="badge-dot"></span>Admissions open for 2025/26</span>
+          <h1>Where curious minds <em>become</em> tomorrow's leaders</h1>
+          <p class="hero-lead">A warm, ambitious community for Kindergarten through Grade 12 — combining academic excellence, expert faculty, and genuine care for every child.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" onclick="go('admissions')">Apply now <span>→</span></a>
+            <a class="btn btn-outline" onclick="openModal()">Book a tour</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong data-count="1200" data-suffix="+">0</strong><span>Students</span></div>
+            <div><strong data-count="45" data-suffix="+">0</strong><span>Teachers</span></div>
+            <div><strong data-count="98" data-suffix="%">0</strong><span>Success rate</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-glow"></div><div class="visual-dots"></div>
+          <div class="main-card">
+            <div class="main-card-header"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+            <div class="main-label">School at a glance</div>
+            <div class="main-title">Graduation Success</div>
+            <div class="main-big">98%<small>↑ 12%</small></div>
+            <div class="progress-track"><div class="progress-fill"></div></div>
+            <div class="main-footer"><span class="up">↑</span> Up from last year</div>
+          </div>
+          <div class="float-card float-1"><div class="float-icon">👨‍🎓</div><div class="float-2-inner"><div class="float-num">1,200+</div><div class="float-label">Students</div></div></div>
+          <div class="float-card float-2"><div class="float-icon">⭐</div><div class="float-2-inner"><div class="float-num">4.9 / 5</div><div class="float-label">Parent rating</div></div></div>
+          <div class="float-card float-3"><div class="float-icon">🎓</div><div class="float-2-inner"><div class="float-num">45+</div><div class="float-label">Expert teachers</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="manifesto">
+    <div class="container">
+      <p>We don't just teach subjects. We teach children to <em>think, question, and lead</em> — with confidence, kindness, and a genuine love of learning.</p>
+      <div class="attribution">— The ABCD School Promise</div>
+    </div>
+  </div>
+
+  <div class="trust">
+    <div class="container">
+      <div class="trust-inner">
+        <div class="trust-item"><span class="trust-icon">🏅</span>Ministry Accredited</div>
+        <div class="trust-item"><span class="trust-icon">🌍</span>International Curriculum</div>
+        <div class="trust-item"><span class="trust-icon">🔒</span>Certified Safe Campus</div>
+        <div class="trust-item"><span class="trust-icon">🎯</span>98% University Placement</div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">By the numbers</span>
+        <h2>What we've built together</h2>
+      </div>
+      <div class="counter-dash">
+        <div class="counter-card reveal">
+          <div class="counter-top"><div class="counter-icon">👨‍🎓</div><div class="counter-label">Students enrolled</div></div>
+          <div class="counter-value"><span data-count="1200">0</span><span class="suffix">+</span></div>
+          <div class="counter-meta">↑ Growing every year</div>
+        </div>
+        <div class="counter-card reveal d1">
+          <div class="counter-top"><div class="counter-icon">👨‍🏫</div><div class="counter-label">Expert faculty</div></div>
+          <div class="counter-value"><span data-count="45">0</span><span class="suffix">+</span></div>
+          <div class="counter-meta">All certified & experienced</div>
+        </div>
+        <div class="counter-card reveal d2">
+          <div class="counter-top"><div class="counter-icon">🎓</div><div class="counter-label">Years of excellence</div></div>
+          <div class="counter-value"><span data-count="15">0</span><span class="suffix">+</span></div>
+          <div class="counter-meta">Since 2010</div>
+        </div>
+        <div class="counter-card reveal d3">
+          <div class="counter-top"><div class="counter-icon">🏆</div><div class="counter-label">Graduation success</div></div>
+          <div class="counter-value"><span data-count="98">0</span><span class="suffix">%</span></div>
+          <div class="counter-meta">National exam pass rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">About ABCD</span>
+          <h2>A school built on care, curiosity, and high standards.</h2>
+          <p>Since 2010, ABCD School has been shaping Ethiopia's next generation with a simple belief — every child deserves an education that sees them, challenges them, and helps them grow.</p>
+          <p>From Kindergarten through Grade 12, we combine rigorous academics with warmth, creativity, and a genuine partnership with families.</p>
+          <ul class="check-list">
+            <li><span class="check">✓</span>Small class sizes with personalized attention</li>
+            <li><span class="check">✓</span>Certified, experienced faculty in every subject</li>
+            <li><span class="check">✓</span>Modern labs, library, and technology centers</li>
+            <li><span class="check">✓</span>Safe, nurturing, and inclusive community</li>
+          </ul>
+          <div style="margin-top:32px"><a class="btn btn-outline" onclick="go('about')">Learn more about us <span>→</span></a></div>
+        </div>
+        <div class="reveal d2">
+          <div class="visual-block">
+            <div class="visual-card-main">
+              <div class="visual-card-main-inner"><div class="icon">🎓</div><h3>15+ Years of Excellence</h3><p>Trusted by thousands of families across Ethiopia</p></div>
+            </div>
+            <div class="visual-badge"><div class="visual-badge-icon">🏆</div><div><div class="visual-badge-num">Top 10</div><div class="visual-badge-label">Private schools</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Programs</span>
+        <h2>A pathway for every stage</h2>
+        <p>From first steps to final exams — structured, thoughtful programs for each stage of your child's journey.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="program reveal">
+          <div class="program-head">
+            <div class="program-num">01</div><div class="program-level">Ages 4–6</div>
+            <h3>Kindergarten</h3><span>Playful foundations</span>
+            <div class="program-tags"><span class="program-tag">Full day</span><span class="program-tag">All levels</span></div>
+          </div>
+          <div class="program-body"><ul><li>Early literacy</li><li>Numbers & patterns</li><li>Creative arts</li><li>Social skills</li></ul><a class="program-link" onclick="go('programs')">Learn more →</a></div>
+        </div>
+        <div class="program reveal d1">
+          <div class="program-head">
+            <div class="program-num">02</div><div class="program-level">Grades 1–6</div>
+            <h3>Primary</h3><span>Building blocks</span>
+            <div class="program-tags"><span class="program-tag">6 years</span><span class="program-tag">Core + electives</span></div>
+          </div>
+          <div class="program-body"><ul><li>Languages & math</li><li>Science & social studies</li><li>Computer basics</li><li>Music & sports</li></ul><a class="program-link" onclick="go('programs')">Learn more →</a></div>
+        </div>
+        <div class="program reveal d2">
+          <div class="program-head">
+            <div class="program-num">03</div><div class="program-level">Grades 7–8</div>
+            <h3>Middle School</h3><span>Growing independence</span>
+            <div class="program-tags"><span class="program-tag">2 years</span><span class="program-tag">Exam prep</span></div>
+          </div>
+          <div class="program-body"><ul><li>Advanced math</li><li>Laboratory science</li><li>Language skills</li><li>National exam prep</li></ul><a class="program-link" onclick="go('programs')">Learn more →</a></div>
+        </div>
+        <div class="program reveal d3">
+          <div class="program-head">
+            <div class="program-num">04</div><div class="program-level">Grades 9–12</div>
+            <h3>High School</h3><span>Future ready</span>
+            <div class="program-tags"><span class="program-tag">4 years</span><span class="program-tag">University prep</span></div>
+          </div>
+          <div class="program-body"><ul><li>Natural sciences</li><li>Social sciences</li><li>University prep</li><li>Career guidance</li></ul><a class="program-link" onclick="go('programs')">Learn more →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Why ABCD</span>
+        <h2>What makes our school different</h2>
+        <p>Every detail — from class size to campus design — is built around one belief: your child deserves the best possible start.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal"><div class="card-icon">🎯</div><h3>Personalized Learning</h3><p>Small class sizes and individualized attention so every child learns at their own pace and reaches their full potential.</p></div>
+        <div class="card reveal d1"><div class="card-icon">👨‍🏫</div><h3>Expert Faculty</h3><p>Certified, experienced teachers who bring passion, patience, and deep subject knowledge to every classroom.</p></div>
+        <div class="card reveal d2"><div class="card-icon">🔬</div><h3>Modern Facilities</h3><p>Fully equipped science labs, computer centers, library, and sports facilities designed for hands-on learning.</p></div>
+        <div class="card reveal"><div class="card-icon">🎨</div><h3>Beyond the Classroom</h3><p>Clubs, sports teams, arts, music, and field trips that help children discover their passions and talents.</p></div>
+        <div class="card reveal d1"><div class="card-icon">🛡️</div><h3>Safe & Nurturing</h3><p>A secure, welcoming campus where children feel safe to explore, question, and grow with confidence.</p></div>
+        <div class="card reveal d2"><div class="card-icon">🤝</div><h3>Parent Partnership</h3><p>Open communication, regular updates, and genuine collaboration between school and family.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Life at ABCD</span>
+        <h2>Moments that shape a school</h2>
+        <p>From first-day smiles to graduation caps — a glimpse into everyday life at our campus.</p>
+      </div>
+      <div class="gallery-tabs reveal" role="tablist" aria-label="Gallery filter">
+        <button class="gallery-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="gallery-tab" data-filter="campus" role="tab" aria-selected="false">Campus</button>
+        <button class="gallery-tab" data-filter="learning" role="tab" aria-selected="false">Learning</button>
+        <button class="gallery-tab" data-filter="sports" role="tab" aria-selected="false">Sports</button>
+        <button class="gallery-tab" data-filter="arts" role="tab" aria-selected="false">Arts</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item reveal" data-cat="campus"><div class="gallery-inner" style="background:linear-gradient(135deg,#1e3a8a,#3b5bdb)"><div class="gallery-emoji">🏫</div><div class="gallery-title">Main Campus</div><div class="gallery-sub">Our home since 2010</div></div><div class="gallery-overlay">View campus →</div></div>
+        <div class="gallery-item reveal d1" data-cat="learning"><div class="gallery-inner" style="background:linear-gradient(135deg,#065F46,#059669)"><div class="gallery-emoji">🔬</div><div class="gallery-title">Science Lab</div><div class="gallery-sub">Hands-on discovery</div></div><div class="gallery-overlay">Explore labs →</div></div>
+        <div class="gallery-item reveal d2" data-cat="arts"><div class="gallery-inner" style="background:linear-gradient(135deg,#7C2D12,#B45309)"><div class="gallery-emoji">🎨</div><div class="gallery-title">Art Studio</div><div class="gallery-sub">Creativity in motion</div></div><div class="gallery-overlay">See the studio →</div></div>
+        <div class="gallery-item reveal d3" data-cat="sports"><div class="gallery-inner" style="background:linear-gradient(135deg,#4C1D95,#6D28D9)"><div class="gallery-emoji">⚽</div><div class="gallery-title">Sports Field</div><div class="gallery-sub">Team spirit & health</div></div><div class="gallery-overlay">Meet our teams →</div></div>
+        <div class="gallery-item reveal" data-cat="learning"><div class="gallery-inner" style="background:linear-gradient(135deg,#1e40af,#2563eb)"><div class="gallery-emoji">📚</div><div class="gallery-title">Library</div><div class="gallery-sub">5,000+ books</div></div><div class="gallery-overlay">Browse the library →</div></div>
+        <div class="gallery-item reveal d1" data-cat="campus"><div class="gallery-inner" style="background:linear-gradient(135deg,#92400E,#B45309)"><div class="gallery-emoji">🌳</div><div class="gallery-title">Outdoor Spaces</div><div class="gallery-sub">Room to breathe</div></div><div class="gallery-overlay">See the grounds →</div></div>
+        <div class="gallery-item reveal d2" data-cat="arts"><div class="gallery-inner" style="background:linear-gradient(135deg,#831843,#BE185D)"><div class="gallery-emoji">🎭</div><div class="gallery-title">Performing Arts</div><div class="gallery-sub">Stage confidence</div></div><div class="gallery-overlay">Watch a show →</div></div>
+        <div class="gallery-item reveal d3" data-cat="sports"><div class="gallery-inner" style="background:linear-gradient(135deg,#064E3B,#047857)"><div class="gallery-emoji">🏀</div><div class="gallery-title">Basketball Court</div><div class="gallery-sub">Where champions train</div></div><div class="gallery-overlay">Join the team →</div></div>
+      </div>
+      <div style="text-align:center;margin-top:40px" class="reveal">
+        <a class="btn btn-outline" onclick="openModal()">Schedule a campus tour <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Parents say</span>
+        <h2>Stories from our community</h2>
+        <p>Hear from parents whose children have grown and thrived at ABCD School.</p>
+      </div>
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial">
+          <span class="quote-mark" aria-hidden="true">"</span>
+          <p class="testimonial-text">Our daughter used to be shy and anxious about school. Two years at ABCD and she's confident, curious, and thriving. The teachers see her — really see her.</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">👩</div><div><div class="testimonial-name">Meron T.</div><div class="testimonial-role">Parent, Grade 4</div></div></div>
+        </div>
+        <div class="testimonial">
+          <span class="quote-mark" aria-hidden="true">"</span>
+          <p class="testimonial-text">The academic standards are excellent, but what truly sets ABCD apart is how much the staff genuinely care about each student's wellbeing and growth.</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">👨</div><div><div class="testimonial-name">Yonas B.</div><div class="testimonial-role">Parent, Grade 9</div></div></div>
+        </div>
+        <div class="testimonial">
+          <span class="quote-mark" aria-hidden="true">"</span>
+          <p class="testimonial-text">We toured five schools before choosing ABCD. It was the only place where our son lit up — he felt at home the moment he walked in.</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">👩</div><div><div class="testimonial-name">Selam G.</div><div class="testimonial-role">Parent, Kindergarten</div></div></div>
+        </div>
+        <div class="testimonial">
+          <span class="quote-mark" aria-hidden="true">"</span>
+          <p class="testimonial-text">Communication with the school is excellent. I always know how my son is doing — academically and personally. That peace of mind is priceless.</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">👨</div><div><div class="testimonial-name">Dawit A.</div><div class="testimonial-role">Parent, Grade 6</div></div></div>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots" role="tablist" aria-label="Testimonials"></div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to give your child <em>the best start?</em></h2>
+      <p>Applications for the 2025/26 school year are open. Spaces are limited — we'd love to meet your family.</p>
+      <a class="btn" onclick="go('admissions')">Start your application <span>→</span></a>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ ABOUT ============ -->
+<div class="page" id="page-about">
+  <div class="page-head"><div class="container"><h1>About ABCD School</h1><p>Our story, our mission, and the values that guide everything we do.</p></div></div>
+
+  <section>
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Our Story</span>
+          <h2>Fifteen years of shaping Ethiopia's next generation</h2>
+          <p>ABCD School was founded in 2010 with a simple, ambitious vision — to create a school where academic excellence and genuine care go hand in hand.</p>
+          <p>What started as a small primary school has grown into a full Kindergarten through Grade 12 institution serving over 1,200 students. But our core promise hasn't changed: every child is known, challenged, and supported.</p>
+          <p>Today, our graduates are studying at top universities in Ethiopia and abroad — but more importantly, they leave us as thoughtful, capable, and kind young people.</p>
+        </div>
+        <div class="reveal d2">
+          <div class="visual-block">
+            <div class="visual-card-main"><div class="visual-card-main-inner"><div class="icon">📚</div><h3>Since 2010</h3><p>Building a legacy of excellence in education</p></div></div>
+            <div class="visual-badge"><div class="visual-badge-icon">👥</div><div><div class="visual-badge-num">1,200+</div><div class="visual-badge-label">Students today</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="card reveal"><div class="card-icon">🎯</div><h3>Our Mission</h3><p>To provide an outstanding education that develops the whole child — academically, socially, emotionally, and ethically — preparing every student to thrive in a changing world and contribute meaningfully to their community.</p></div>
+        <div class="card reveal d1"><div class="card-icon">👁️</div><h3>Our Vision</h3><p>To be recognized as one of Ethiopia's leading private schools — known not only for academic results, but for the character, curiosity, and confidence of our graduates.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Our Values</span><h2>The principles that guide us</h2></div>
+      <div class="grid grid-3">
+        <div class="card reveal"><div class="card-icon">💎</div><h3>Excellence</h3><p>We hold high expectations for ourselves and our students — and provide the support needed to reach them.</p></div>
+        <div class="card reveal d1"><div class="card-icon">❤️</div><h3>Respect</h3><p>Every person in our community is treated with dignity, kindness, and genuine care.</p></div>
+        <div class="card reveal d2"><div class="card-icon">🌱</div><h3>Growth</h3><p>We embrace continuous improvement, curiosity, and a willingness to learn from every experience.</p></div>
+        <div class="card reveal"><div class="card-icon">🤝</div><h3>Partnership</h3><p>Strong collaboration between students, teachers, and families is at the heart of our success.</p></div>
+        <div class="card reveal d1"><div class="card-icon">⚖️</div><h3>Integrity</h3><p>We act with honesty, transparency, and consistency in all our decisions and relationships.</p></div>
+        <div class="card reveal d2"><div class="card-icon">🌟</div><h3>Responsibility</h3><p>We take full responsibility for our students, our community, and the trust families place in us.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Milestones</span><h2>Our journey so far</h2></div>
+      <div class="timeline">
+        <div class="timeline-item reveal"><div class="timeline-year">2010</div><h4>The beginning</h4><p>ABCD School opens its doors with Kindergarten through Grade 4, welcoming its first 80 students.</p></div>
+        <div class="timeline-item reveal d1"><div class="timeline-year">2014</div><h4>Primary complete</h4><p>The school expands to Grade 8, becoming a full primary institution with modern facilities.</p></div>
+        <div class="timeline-item reveal d2"><div class="timeline-year">2018</div><h4>Secondary campus</h4><p>Grades 9 and 10 are added, along with new science labs and a dedicated library.</p></div>
+        <div class="timeline-item reveal d3"><div class="timeline-year">2021</div><h4>Full K-12 school</h4><p>ABCD becomes a complete Kindergarten through Grade 12 institution, serving over 900 students.</p></div>
+        <div class="timeline-item reveal d4"><div class="timeline-year">2025</div><h4>Today</h4><p>Over 1,200 students, 45 expert teachers, and a growing community of proud alumni worldwide.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container"><h2>Want to see our campus <em>in person?</em></h2><p>Book a tour — we'd love to show you around and answer your questions.</p><a class="btn" onclick="openModal()">Book a tour <span>→</span></a></div>
+  </section>
+</div>
+
+<!-- ============ PROGRAMS ============ -->
+<div class="page" id="page-programs">
+  <div class="page-head"><div class="container"><h1>Our Programs</h1><p>A complete academic journey from Kindergarten through Grade 12.</p></div></div>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Academic Levels</span><h2>Structured for every stage</h2><p>Each program is designed to meet your child where they are — and challenge them to go further.</p></div>
+      <div class="grid grid-2">
+        <div class="program reveal">
+          <div class="program-head"><div class="program-num">01</div><div class="program-level">Ages 4–6</div><h3>Kindergarten</h3><span>A joyful introduction to learning</span><div class="program-tags"><span class="program-tag">Full day</span><span class="program-tag">All levels</span></div></div>
+          <div class="program-body"><ul><li>Early literacy and phonics</li><li>Numbers, patterns, and problem-solving</li><li>Creative arts, music, and movement</li><li>Social-emotional development</li><li>Hands-on exploration and play</li></ul></div>
+        </div>
+        <div class="program reveal d1">
+          <div class="program-head"><div class="program-num">02</div><div class="program-level">Grades 1–6</div><h3>Primary School</h3><span>Building strong foundations</span><div class="program-tags"><span class="program-tag">6 years</span><span class="program-tag">Core + electives</span></div></div>
+          <div class="program-body"><ul><li>Languages, mathematics, and science</li><li>Social studies and civic education</li><li>Computer literacy and digital skills</li><li>Arts, music, and physical education</li><li>Study skills and good habits</li></ul></div>
+        </div>
+        <div class="program reveal">
+          <div class="program-head"><div class="program-num">03</div><div class="program-level">Grades 7–8</div><h3>Middle School</h3><span>Growing independence and depth</span><div class="program-tags"><span class="program-tag">2 years</span><span class="program-tag">Exam prep</span></div></div>
+          <div class="program-body"><ul><li>Advanced mathematics and science</li><li>Laboratory work and experiments</li><li>Language and literature studies</li><li>Research and presentation skills</li><li>National exam preparation</li></ul></div>
+        </div>
+        <div class="program reveal d1">
+          <div class="program-head"><div class="program-num">04</div><div class="program-level">Grades 9–12</div><h3>High School</h3><span>Preparing for university and beyond</span><div class="program-tags"><span class="program-tag">4 years</span><span class="program-tag">University prep</span></div></div>
+          <div class="program-body"><ul><li>Natural sciences: biology, chemistry, physics</li><li>Social sciences: history, geography, civics</li><li>Advanced mathematics</li><li>Career guidance and university prep</li><li>National exam preparation</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Beyond Academics</span><h2>Learning that goes further</h2><p>Because the best education develops the whole child — not just their grades.</p></div>
+      <div class="grid grid-3">
+        <div class="card reveal"><div class="card-icon">🚌</div><h3>Safe Transport</h3><p>Reliable, supervised school bus service covering major neighborhoods, with trained drivers and attendants.</p></div>
+        <div class="card reveal d1"><div class="card-icon">🍽️</div><h3>Healthy Meals</h3><p>Balanced, nutritious lunches prepared fresh on campus — because hungry children can't learn well.</p></div>
+        <div class="card reveal d2"><div class="card-icon">🏥</div><h3>Health Services</h3><p>On-site nurse and regular health check-ups to keep students healthy and parents informed.</p></div>
+        <div class="card reveal"><div class="card-icon">💻</div><h3>Computer Labs</h3><p>Modern computer facilities with coding, digital literacy, and technology classes for all grades.</p></div>
+        <div class="card reveal d1"><div class="card-icon">📖</div><h3>Library</h3><p>A well-stocked library with over 5,000 books, quiet reading areas, and research support.</p></div>
+        <div class="card reveal d2"><div class="card-icon">🧠</div><h3>Counseling</h3><p>Professional counselors available to support students' wellbeing, goals, and personal growth.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container"><h2>Found the right program <em>for your child?</em></h2><p>Apply today — our admissions team is ready to help.</p><a class="btn" onclick="go('admissions')">Start application <span>→</span></a></div>
+  </section>
+</div>
+
+<!-- ============ TEACHERS ============ -->
+<div class="page" id="page-teachers">
+  <div class="page-head"><div class="container"><h1>Meet Our Faculty</h1><p>Experienced, dedicated educators who make learning come alive.</p></div></div>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Our Team</span><h2>The people behind the classroom</h2><p>Every teacher at ABCD is certified, experienced, and genuinely passionate about helping children succeed.</p></div>
+      <div class="faculty-filter reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="text" id="facultySearch" placeholder="Search by name or subject..." aria-label="Search faculty">
+      </div>
+      <div class="grid grid-3" id="facultyGrid">
+        <div class="teacher reveal" data-search="daniel tesfaye head of school"><div class="teacher-avatar">👨‍🏫</div><h3>Daniel Tesfaye</h3><div class="teacher-role">Head of School</div><p class="teacher-meta">M.A. Educational Leadership<br>18 years experience</p></div>
+        <div class="teacher reveal d1" data-search="sarah abebe mathematics math"><div class="teacher-avatar">👩‍🏫</div><h3>Sarah Abebe</h3><div class="teacher-role">Mathematics</div><p class="teacher-meta">B.Sc. Mathematics<br>12 years experience</p></div>
+        <div class="teacher reveal d2" data-search="michael gebre physics science"><div class="teacher-avatar">👨‍🏫</div><h3>Michael Gebre</h3><div class="teacher-role">Physics & Science</div><p class="teacher-meta">M.Sc. Physics<br>14 years experience</p></div>
+        <div class="teacher reveal" data-search="hannah mulugeta languages"><div class="teacher-avatar">👩‍🏫</div><h3>Hannah Mulugeta</h3><div class="teacher-role">Languages</div><p class="teacher-meta">B.A. Linguistics<br>10 years experience</p></div>
+        <div class="teacher reveal d1" data-search="joseph kassahun english"><div class="teacher-avatar">👨‍🏫</div><h3>Joseph Kassahun</h3><div class="teacher-role">English</div><p class="teacher-meta">M.A. English Literature<br>11 years experience</p></div>
+        <div class="teacher reveal d2" data-search="tigist mengistu kindergarten early childhood"><div class="teacher-avatar">👩‍🏫</div><h3>Tigist Mengistu</h3><div class="teacher-role">Kindergarten Lead</div><p class="teacher-meta">B.Ed. Early Childhood<br>9 years experience</p></div>
+        <div class="teacher reveal" data-search="benjamin lemma computer science"><div class="teacher-avatar">👨‍🏫</div><h3>Benjamin Lemma</h3><div class="teacher-role">Computer Science</div><p class="teacher-meta">B.Sc. Information Technology<br>8 years experience</p></div>
+        <div class="teacher reveal d1" data-search="ruth alemu social studies history"><div class="teacher-avatar">👩‍🏫</div><h3>Ruth Alemu</h3><div class="teacher-role">Social Studies</div><p class="teacher-meta">B.A. History<br>10 years experience</p></div>
+        <div class="teacher reveal d2" data-search="nathan bekele physical education sports"><div class="teacher-avatar">👨‍🏫</div><h3>Nathan Bekele</h3><div class="teacher-role">Physical Education</div><p class="teacher-meta">B.Sc. Sports Science<br>7 years experience</p></div>
+      </div>
+      <div class="faculty-empty" id="facultyEmpty">No teachers match your search. Try a different name or subject.</div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">What Sets Us Apart</span><h2>Why our faculty is different</h2></div>
+      <div class="grid grid-2">
+        <div class="card reveal"><div class="card-icon">🎓</div><h3>Fully Certified</h3><p>Every teacher holds a valid teaching license and a degree in their subject area — no exceptions.</p></div>
+        <div class="card reveal d1"><div class="card-icon">📈</div><h3>Continuous Training</h3><p>Our teachers participate in regular professional development to stay current with modern teaching methods.</p></div>
+        <div class="card reveal"><div class="card-icon">❤️</div><h3>Genuine Care</h3><p>Our teachers don't just teach subjects — they know their students as individuals and support their growth.</p></div>
+        <div class="card reveal d1"><div class="card-icon">🌟</div><h3>Individual Attention</h3><p>Small class sizes let every teacher give each student the attention and support they deserve.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container"><h2>Want to join <em>our team?</em></h2><p>We're always looking for exceptional educators. If that's you, we'd love to hear from you.</p><a class="btn" onclick="go('contact')">Get in touch <span>→</span></a></div>
+  </section>
+</div>
+
+<!-- ============ ADMISSIONS ============ -->
+<div class="page" id="page-admissions">
+  <div class="page-head"><div class="container"><h1>Admissions</h1><p>Join our community — applications for 2025/26 are now open.</p></div></div>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">How It Works</span><h2>Four simple steps</h2><p>We've designed our admissions process to be clear, welcoming, and stress-free.</p></div>
+      <div class="grid grid-4">
+        <div class="step reveal"><div class="step-num">1</div><h3>Submit Application</h3><p>Fill out the short form below or visit our office to pick up an application.</p></div>
+        <div class="step reveal d1"><div class="step-num">2</div><h3>Provide Documents</h3><p>Submit birth certificate, previous school records, and two recent photos.</p></div>
+        <div class="step reveal d2"><div class="step-num">3</div><h3>Entrance Assessment</h3><p>From Grade 2 onwards, a short assessment helps us place your child appropriately.</p></div>
+        <div class="step reveal d3"><div class="step-num">4</div><h3>Confirm Enrollment</h3><p>Once accepted, complete registration and payment to secure your child's spot.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Key Information</span>
+          <h2>What you need to know</h2>
+          <div class="contact-item"><div class="contact-item-icon">📅</div><div><h4>Application Window</h4><p>September 1 – October 15 (for the current school year)</p></div></div>
+          <div class="contact-item"><div class="contact-item-icon">📄</div><div><h4>Required Documents</h4><p>Birth certificate, previous school transcript, two passport photos</p></div></div>
+          <div class="contact-item"><div class="contact-item-icon">💰</div><div><h4>Tuition</h4><p>Contact our admissions office for detailed fee structure</p></div></div>
+          <div class="contact-item"><div class="contact-item-icon">📞</div><div><h4>Questions?</h4><p>+251 91 234 5678 · admissions@abcdschool.et</p></div></div>
+        </div>
+        <div class="reveal d2">
+          <div class="form-card">
+            <h3>Apply online</h3>
+            <p>Fill out the form below and our team will be in touch within 48 hours.</p>
+            <form onsubmit="submitForm(event)" novalidate>
+              <div class="form-grid">
+                <div class="form-group"><label for="app-name">Student full name *</label><input id="app-name" type="text" required placeholder="Full name"><div class="error-msg">Please enter a name</div></div>
+                <div class="form-group"><label for="app-dob">Date of birth *</label><input id="app-dob" type="date" required><div class="error-msg">Please select a date</div></div>
+                <div class="form-group"><label for="app-gender">Gender *</label><select id="app-gender" required><option value="">Select</option><option>Male</option><option>Female</option></select><div class="error-msg">Please select</div></div>
+                <div class="form-group"><label for="app-grade">Grade applying for *</label><select id="app-grade" required><option value="">Select</option><option>Kindergarten</option><option>Grade 1</option><option>Grade 2</option><option>Grade 3</option><option>Grade 4</option><option>Grade 5</option><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11</option><option>Grade 12</option></select><div class="error-msg">Please select a grade</div></div>
+                <div class="form-group"><label for="app-parent">Parent / guardian name *</label><input id="app-parent" type="text" required placeholder="Full name"><div class="error-msg">Please enter a name</div></div>
+                <div class="form-group"><label for="app-phone">Phone number *</label><input id="app-phone" type="tel" required placeholder="+251 9XX XXX XXX"><div class="error-msg">Please enter a phone number</div></div>
+                <div class="form-group full"><label for="app-email">Email address</label><input id="app-email" type="email" placeholder="you@example.com"><div class="error-msg">Please enter a valid email</div></div>
+                <div class="form-group full"><label for="app-notes">Additional notes</label><textarea id="app-notes" placeholder="Anything we should know?"></textarea></div>
+                <div class="form-group full"><button type="submit" class="btn btn-primary" style="width:100%">Submit application</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
+      <div class="faq-search reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="text" id="faqSearchAdmissions" placeholder="Search FAQs..." aria-label="Search FAQs">
+      </div>
+      <div class="grid grid-2" data-faq-group>
+        <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">When can I apply?</button><div class="faq-a"><p>Applications open September 1 and close October 15 each year. Mid-year admissions may be available based on space — contact us to check.</p></div></div>
+        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is there an entrance exam?</button><div class="faq-a"><p>Yes — from Grade 2 onwards, a short assessment ensures we place your child at the right level. Kindergarten admissions are based on a friendly observation session.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do you offer school transport?</button><div class="faq-a"><p>Yes, we provide supervised school bus service to major neighborhoods. Routes and fees are available from our office.</p></div></div>
+        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What are the tuition fees?</button><div class="faq-a"><p>Fees vary by grade level. Detailed fee structures are available from our admissions office — contact us to request a copy.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I schedule a campus tour?</button><div class="faq-a"><p>Absolutely. We encourage all prospective families to visit. Book a tour via our contact page or call our office.</p></div></div>
+        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What extracurriculars are offered?</button><div class="faq-a"><p>We offer sports teams, music, art, science club, coding club, and more. Activities vary by grade level — see our programs page.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container"><h2>Still have <em>questions?</em></h2><p>Our admissions team is happy to help — reach out any time.</p><a class="btn" onclick="go('contact')">Contact us <span>→</span></a></div>
+  </section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="page" id="page-contact">
+  <div class="page-head"><div class="container"><h1>Get in Touch</h1><p>We'd love to hear from you — questions, feedback, or a tour request.</p></div></div>
+
+  <section>
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Contact Information</span>
+          <h2>How to reach us</h2>
+          <div class="contact-item"><div class="contact-item-icon">📍</div><div><h4>Address</h4><p>Addis Ababa, Ethiopia<br>Kebele 05, Woreda 03</p></div></div>
+          <div class="contact-item"><div class="contact-item-icon">📞</div><div><h4>Phone</h4><p>+251 91 234 5678<br>+251 91 876 5432</p></div></div>
+          <div class="contact-item"><div class="contact-item-icon">✉️</div><div><h4>Email</h4><p>info@abcdschool.et<br>admissions@abcdschool.et</p></div></div>
+          <div class="contact-item"><div class="contact-item-icon">🕐</div><div><h4>Office Hours</h4><p>Monday – Friday: 8:00 – 17:00<br>Saturday: 8:00 – 12:00</p></div></div>
+          <div style="margin-top:24px"><a class="btn btn-outline" href="https://wa.me/251912345678" target="_blank" rel="noopener">Chat on WhatsApp <span>→</span></a></div>
+        </div>
+        <div class="reveal d2">
+          <div class="form-card">
+            <h3>Send us a message</h3>
+            <p>We typically respond within one business day.</p>
+            <form onsubmit="submitForm(event)" novalidate>
+              <div class="form-grid">
+                <div class="form-group"><label for="c-name">Full name *</label><input id="c-name" type="text" required placeholder="Your name"><div class="error-msg">Please enter your name</div></div>
+                <div class="form-group"><label for="c-phone">Phone *</label><input id="c-phone" type="tel" required placeholder="+251 9XX XXX XXX"><div class="error-msg">Please enter your phone</div></div>
+                <div class="form-group full"><label for="c-email">Email *</label><input id="c-email" type="email" required placeholder="you@example.com"><div class="error-msg">Please enter a valid email</div></div>
+                <div class="form-group full"><label for="c-subject">Subject *</label><input id="c-subject" type="text" required placeholder="What is this about?"><div class="error-msg">Please enter a subject</div></div>
+                <div class="form-group full"><label for="c-message">Message *</label><textarea id="c-message" required placeholder="Your message..."></textarea><div class="error-msg">Please enter a message</div></div>
+                <div class="form-group full"><button type="submit" class="btn btn-primary" style="width:100%">Send message</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg-alt)">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Frequently asked questions</h2></div>
+      <div class="faq-search reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="text" id="faqSearchContact" placeholder="Search FAQs..." aria-label="Search FAQs">
+      </div>
+      <div class="grid grid-2" data-faq-group>
+        <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How do I schedule a campus tour?</button><div class="faq-a"><p>Call our office or fill out the contact form above — we'll find a time that works for you.</p></div></div>
+        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do you accept transfer students?</button><div class="faq-a"><p>Yes, we welcome transfer students throughout the year, subject to space and assessment.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What languages are taught?</button><div class="faq-a"><p>Students learn English, Amharic, and can choose additional language electives in higher grades.</p></div></div>
+        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is financial aid available?</button><div class="faq-a"><p>We offer limited need-based scholarships to exceptional students. Contact our office for details.</p></div></div>
+        <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How many students are in each class?</button><div class="faq-a"><p>Class sizes are capped at 25 students, with smaller groups for Kindergarten and specialist subjects.</p></div></div>
+        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do you provide school meals?</button><div class="faq-a"><p>Yes — a nutritious hot lunch is served daily on campus. Vegetarian options are always available.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container"><h2>Come <em>visit us</em> — see it for yourself</h2><p>The best way to understand our school is to walk our halls. We'd love to meet you.</p><a class="btn" onclick="openModal()">Book a visit <span>→</span></a></div>
+  </section>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-mark">ABCD</span><span>School</span></div>
+        <p>A Kindergarten through Grade 12 school dedicated to academic excellence, character, and care for every child.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◉</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>School</h5><a onclick="go('home')">Home</a><a onclick="go('about')">About Us</a><a onclick="go('programs')">Programs</a><a onclick="go('teachers')">Faculty</a></div>
+      <div class="footer-col"><h5>Admissions</h5><a onclick="go('admissions')">How to Apply</a><a onclick="go('admissions')">Requirements</a><a onclick="openModal()">Book a Tour</a><a onclick="go('contact')">Contact Us</a></div>
+      <div class="footer-col">
+        <h5>Stay in touch</h5>
+        <p>School news, events, and admissions updates.</p>
+        <div class="newsletter">
+          <form onsubmit="handleNewsletter(event)">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" type="email" required placeholder="Your email">
+            <button type="submit" aria-label="Subscribe">→</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 ABCD School. All rights reserved. · <a href="#" style="color:inherit;text-decoration:underline">Privacy</a> · <a href="#" style="color:inherit;text-decoration:underline">Terms</a></div>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+<a class="whatsapp-fab" href="https://wa.me/251912345678?text=Hello%20ABCD%20School%2C%20I%27d%20like%20to%20know%20more%20about%20admissions." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- STICKY MOBILE -->
+<div class="sticky-cta"><a class="btn btn-primary" onclick="go('admissions')">Apply for 2025/26 <span>→</span></a></div>
+
+<!-- MODAL -->
+<div class="modal" id="tourModal" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-label="Book a campus tour">
+  <div class="modal-inner">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+    <h3>Book a campus tour</h3>
+    <p>Come see ABCD School in person. Here's how it works:</p>
+    <div class="modal-steps">
+      <div class="modal-step"><div class="modal-step-num">1</div><p><strong>Choose a time</strong> — tours run Monday to Saturday, 9:00–16:00.</p></div>
+      <div class="modal-step"><div class="modal-step-num">2</div><p><strong>Meet our team</strong> — you'll be welcomed by our admissions office.</p></div>
+      <div class="modal-step"><div class="modal-step-num">3</div><p><strong>Walk the campus</strong> — see classrooms, labs, library, and sports facilities.</p></div>
+      <div class="modal-step"><div class="modal-step-num">4</div><p><strong>Ask anything</strong> — we'll answer your questions and explain next steps.</p></div>
+    </div>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary" href="https://wa.me/251912345678?text=Hello%20ABCD%20School%2C%20I%27d%20like%20to%20book%20a%20campus%20tour." target="_blank" rel="noopener">Book via WhatsApp</a>
+      <a class="btn btn-outline" onclick="closeModal();go('contact')">Use contact form</a>
+    </div>
+  </div>
+</div>
+
+<!-- COMMAND PALETTE -->
+<div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Command palette">
+  <div class="cmdk-backdrop" onclick="closeCmdk()"></div>
+  <div class="cmdk-panel">
+    <div class="cmdk-input-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="cmdkInput" type="text" placeholder="Search pages, actions, FAQs..." aria-label="Search" autocomplete="off">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="cmdk-results" id="cmdkResults" role="listbox"></div>
+    <div class="cmdk-footer">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span><kbd>↵</kbd> select</span>
+      <span><kbd>Esc</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<!-- TOASTS -->
+<div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="region" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience and analyze site traffic. By continuing, you agree to our use of cookies.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-primary" onclick="acceptCookies()">Accept</button>
+    <button class="btn btn-outline" onclick="declineCookies()">Decline</button>
+  </div>
+</div>
+
+<script>
+/* ============================================
+   THEME
+   ============================================ */
+function initTheme(){
+  const saved = localStorage.getItem('theme');
+  const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', saved || prefers);
+}
+function toggleTheme(){
+  const cur = document.documentElement.getAttribute('data-theme');
+  const next = cur === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  toast(`Switched to ${next} mode`, 'info');
+}
+initTheme();
+
+/* ============================================
+   ROUTING
+   ============================================ */
+const validPages = ['home','about','programs','teachers','admissions','contact'];
+function go(page){
+  if(!validPages.includes(page)) page = 'home';
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const target = document.getElementById('page-'+page);
+  if(target) target.classList.add('active');
+  document.querySelectorAll('.nav-menu a').forEach(a=>a.classList.toggle('active', a.dataset.page===page));
+  document.getElementById('navMenu').classList.remove('open');
+  window.scrollTo({top:0,behavior:'instant'});
+  history.replaceState(null,'','#'+page);
+  setTimeout(()=>{ observeReveals(); if(page==='home') runCounters(); }, 60);
+}
+function handleHash(){
+  const h = location.hash.replace('#','');
+  go(validPages.includes(h)?h:'home');
+}
+window.addEventListener('hashchange', handleHash);
+
+/* ============================================
+   REVEAL
+   ============================================ */
+let revealObserver;
+function observeReveals(){
+  if(revealObserver) revealObserver.disconnect();
+  revealObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.page.active .reveal').forEach(el=>revealObserver.observe(el));
+}
+
+/* ============================================
+   COUNTERS
+   ============================================ */
+function runCounters(){
+  const els = document.querySelectorAll('.page.active [data-count]');
+  els.forEach(el=>{
+    if(el.dataset.done) return;
+    el.dataset.done = '1';
+    const target = +el.dataset.count;
+    const suffix = el.dataset.suffix || '';
+    let cur = 0;
+    const step = target/50;
+    const tick = ()=>{
+      cur += step;
+      if(cur < target){ el.textContent = Math.floor(cur)+suffix; requestAnimationFrame(tick); }
+      else { el.textContent = target+suffix; }
+    };
+    tick();
+  });
+}
+
+/* ============================================
+   GALLERY FILTER
+   ============================================ */
+document.querySelectorAll('.gallery-tab').forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    document.querySelectorAll('.gallery-tab').forEach(t=>{ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+    tab.classList.add('active'); tab.setAttribute('aria-selected','true');
+    const filter = tab.dataset.filter;
+    document.querySelectorAll('.gallery-item').forEach(item=>{
+      const show = filter==='all' || item.dataset.cat===filter;
+      item.classList.toggle('hidden', !show);
+    });
+  });
+});
+
+/* ============================================
+   FAQ
+   ============================================ */
+function toggleFaq(btn){
+  const item = btn.parentElement;
+  const open = item.classList.contains('open');
+  item.parentElement.querySelectorAll('.faq-item.open').forEach(i=>{
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if(!open){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+}
+
+/* FAQ search */
+function bindFaqSearch(id){
+  const input = document.getElementById(id);
+  if(!input) return;
+  input.addEventListener('input', ()=>{
+    const q = input.value.toLowerCase().trim();
+    const group = input.closest('.container').querySelector('[data-faq-group]');
+    if(!group) return;
+    group.querySelectorAll('.faq-item').forEach(item=>{
+      const text = item.textContent.toLowerCase();
+      item.classList.toggle('hidden', q !== '' && !text.includes(q));
+    });
+  });
+}
+bindFaqSearch('faqSearchAdmissions');
+bindFaqSearch('faqSearchContact');
+
+/* ============================================
+   FACULTY SEARCH
+   ============================================ */
+const facultySearch = document.getElementById('facultySearch');
+if(facultySearch){
+  facultySearch.addEventListener('input', e=>{
+    const q = e.target.value.toLowerCase().trim();
+    let shown = 0;
+    document.querySelectorAll('#facultyGrid .teacher').forEach(card=>{
+      const text = (card.dataset.search || card.textContent).toLowerCase();
+      const match = q === '' || text.includes(q);
+      card.classList.toggle('hidden', !match);
+      if(match) shown++;
+    });
+    document.getElementById('facultyEmpty').classList.toggle('show', shown === 0 && q !== '');
+  });
+}
+
+/* ============================================
+   TESTIMONIAL CAROUSEL
+   ============================================ */
+(function initTestimonials(){
+  const track = document.getElementById('testimonialTrack');
+  const dotsWrap = document.getElementById('testimonialDots');
+  if(!track || !dotsWrap) return;
+  const items = track.querySelectorAll('.testimonial');
+  if(!items.length) return;
+
+  // Build dots based on visible per view
+  function visibleCount(){
+    if(window.innerWidth >= 1024) return 3;
+    if(window.innerWidth >= 768) return 2;
+    return 1;
+  }
+  let current = 0, autoTimer;
+
+  function renderDots(){
+    dotsWrap.innerHTML = '';
+    const visible = visibleCount();
+    const pages = Math.max(1, Math.ceil(items.length - visible + 1));
+    for(let i=0; i<pages; i++){
+      const dot = document.createElement('button');
+      dot.className = 'testimonial-dot' + (i===current ? ' active' : '');
+      dot.setAttribute('aria-label', `Go to testimonial ${i+1}`);
+      dot.addEventListener('click', ()=> scrollTo(i));
+      dotsWrap.appendChild(dot);
+    }
+  }
+  function scrollTo(i){
+    const visible = visibleCount();
+    const pages = Math.max(1, items.length - visible + 1);
+    current = Math.max(0, Math.min(i, pages-1));
+    const item = items[current];
+    if(item) track.scrollTo({left: item.offsetLeft - track.offsetLeft, behavior:'smooth'});
+    dotsWrap.querySelectorAll('.testimonial-dot').forEach((d,idx)=>d.classList.toggle('active', idx===current));
+    restartAuto();
+  }
+  function autoAdvance(){
+    const visible = visibleCount();
+    const pages = Math.max(1, items.length - visible + 1);
+    current = (current + 1) % pages;
+    const item = items[current];
+    if(item) track.scrollTo({left: item.offsetLeft - track.offsetLeft, behavior:'smooth'});
+    dotsWrap.querySelectorAll('.testimonial-dot').forEach((d,idx)=>d.classList.toggle('active', idx===current));
+  }
+  function restartAuto(){
+    clearInterval(autoTimer);
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    autoTimer = setInterval(autoAdvance, 5500);
+  }
+  renderDots();
+  restartAuto();
+  window.addEventListener('resize', ()=>{ renderDots(); scrollTo(0); });
+  track.addEventListener('mouseenter', ()=>clearInterval(autoTimer));
+  track.addEventListener('mouseleave', restartAuto);
+})();
+
+/* ============================================
+   FORMS + VALIDATION
+   ============================================ */
+function validateField(field){
+  const errorEl = field.parentElement.querySelector('.error-msg');
+  field.classList.remove('field-error');
+  if(errorEl) errorEl.classList.remove('show');
+  if(field.hasAttribute('required') && !field.value.trim()){
+    field.classList.add('field-error');
+    if(errorEl) errorEl.classList.add('show');
+    return false;
+  }
+  if(field.type === 'email' && field.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)){
+    field.classList.add('field-error');
+    if(errorEl) errorEl.classList.add('show');
+    return false;
+  }
+  return true;
+}
+function submitForm(e){
+  e.preventDefault();
+  const form = e.target;
+  const fields = form.querySelectorAll('[required], input[type="email"]');
+  let valid = true;
+  fields.forEach(f => { if(!validateField(f)) valid = false; });
+  if(!valid){
+    toast('Please check the highlighted fields', 'error');
+    const firstError = form.querySelector('.field-error');
+    if(firstError) firstError.focus();
+    return;
+  }
+  const btn = form.querySelector('button[type="submit"]');
+  const original = btn.textContent;
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  btn.style.opacity = '.7';
+  setTimeout(()=>{
+    btn.textContent = original;
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    form.reset();
+    toast('✓ Message sent! We\'ll be in touch soon.', 'success');
+  }, 900);
+}
+// Attach input listeners for live validation
+document.querySelectorAll('form [required], form input[type="email"]').forEach(f => {
+  f.addEventListener('blur', ()=>validateField(f));
+  f.addEventListener('input', ()=>{
+    if(f.classList.contains('field-error')) validateField(f);
+  });
+});
+
+/* Newsletter */
+function handleNewsletter(e){
+  e.preventDefault();
+  const input = e.target.querySelector('input');
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)){
+    toast('Please enter a valid email', 'error');
+    return;
+  }
+  toast('✓ Subscribed! Welcome to our newsletter.', 'success');
+  e.target.reset();
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+let previousFocus = null;
+function openModal(){
+  previousFocus = document.activeElement;
+  document.getElementById('tourModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(()=>document.querySelector('.modal-close').focus(), 100);
+}
+function closeModal(){
+  document.getElementById('tourModal').classList.remove('open');
+  document.body.style.overflow = '';
+  if(previousFocus) previousFocus.focus();
+}
+
+/* ============================================
+   SCROLL
+   ============================================ */
+const progressBar = document.getElementById('progress');
+const backTop = document.getElementById('backTop');
+function onScroll(){
+  const scrolled = window.scrollY;
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = height>0 ? (scrolled/height)*100 : 0;
+  progressBar.style.width = pct+'%';
+  if(scrolled>400) backTop.classList.add('show'); else backTop.classList.remove('show');
+}
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* ============================================
+   TOAST
+   ============================================ */
+function toast(message, type='success'){
+  const container = document.getElementById('toastContainer');
+  const el = document.createElement('div');
+  el.className = `toast toast-${type}`;
+  const icon = type === 'success' ? '✓' : type === 'error' ? '!' : 'ⓘ';
+  el.innerHTML = `<div class="toast-icon">${icon}</div><div class="toast-message"></div>`;
+  el.querySelector('.toast-message').textContent = message;
+  container.appendChild(el);
+  setTimeout(()=>{
+    el.classList.add('out');
+    setTimeout(()=>el.remove(), 250);
+  }, 3800);
+}
+
+/* ============================================
+   COOKIE CONSENT
+   ============================================ */
+function initCookies(){
+  if(localStorage.getItem('cookies-consent')) return;
+  setTimeout(()=>document.getElementById('cookieBanner').classList.add('show'), 1200);
+}
+function acceptCookies(){
+  localStorage.setItem('cookies-consent','accepted');
+  document.getElementById('cookieBanner').classList.remove('show');
+  toast('Thanks! Cookie preferences saved.', 'success');
+}
+function declineCookies(){
+  localStorage.setItem('cookies-consent','declined');
+  document.getElementById('cookieBanner').classList.remove('show');
+  toast('Cookies declined.', 'info');
+}
+initCookies();
+
+/* ============================================
+   COMMAND PALETTE
+   ============================================ */
+const commands = [
+  {id:'home', icon:'🏠', label:'Home', desc:'Go to homepage', type:'Page', action:()=>go('home'), keywords:'home start index'},
+  {id:'about', icon:'📖', label:'About Us', desc:'Our story, mission, and values', type:'Page', action:()=>go('about'), keywords:'about story mission vision values'},
+  {id:'programs', icon:'📚', label:'Programs', desc:'K-12 academic programs', type:'Page', action:()=>go('programs'), keywords:'programs curriculum academics grade kindergarten primary high school'},
+  {id:'teachers', icon:'👨‍🏫', label:'Faculty', desc:'Meet our teachers', type:'Page', action:()=>go('teachers'), keywords:'teachers faculty staff educators'},
+  {id:'admissions', icon:'✍️', label:'Admissions', desc:'Apply to ABCD School', type:'Page', action:()=>go('admissions'), keywords:'apply admission enrollment register join'},
+  {id:'contact', icon:'✉️', label:'Contact', desc:'Get in touch with us', type:'Page', action:()=>go('contact'), keywords:'contact email phone address reach message'},
+  {id:'apply', icon:'🎓', label:'Start Application', desc:'Open the online application form', type:'Action', action:()=>{ go('admissions'); setTimeout(()=>document.querySelector('#page-admissions form')?.scrollIntoView({behavior:'smooth',block:'center'}), 300); }, keywords:'apply start form admission'},
+  {id:'tour', icon:'🏫', label:'Book a Campus Tour', desc:'Schedule a visit', type:'Action', action:()=>openModal(), keywords:'tour visit book schedule campus'},
+  {id:'whatsapp', icon:'💬', label:'Chat on WhatsApp', desc:'Message us instantly', type:'Action', action:()=>window.open('https://wa.me/251912345678?text=Hello%20ABCD%20School%2C%20I%27d%20like%20to%20know%20more.','_blank'), keywords:'whatsapp chat message dm'},
+  {id:'theme', icon:'🌓', label:'Toggle Dark Mode', desc:'Switch between light and dark', type:'Action', action:()=>toggleTheme(), keywords:'theme dark light mode'},
+  {id:'faq-tour', icon:'❓', label:'How do I schedule a tour?', desc:'FAQ · Contact', type:'FAQ', action:()=>{ go('contact'); setTimeout(()=>{ const item=[...document.querySelectorAll('#page-contact .faq-item')].find(f=>f.textContent.includes('schedule')); item?.scrollIntoView({behavior:'smooth',block:'center'}); item?.classList.add('open'); },300); }, keywords:'tour schedule visit faq'},
+  {id:'faq-fees', icon:'❓', label:'What are the tuition fees?', desc:'FAQ · Admissions', type:'FAQ', action:()=>{ go('admissions'); setTimeout(()=>{ const item=[...document.querySelectorAll('#page-admissions .faq-item')].find(f=>f.textContent.includes('tuition')); item?.scrollIntoView({behavior:'smooth',block:'center'}); item?.classList.add('open'); },300); }, keywords:'fees tuition cost price faq'},
+  {id:'faq-transport', icon:'❓', label:'Do you offer school transport?', desc:'FAQ · Admissions', type:'FAQ', action:()=>{ go('admissions'); setTimeout(()=>{ const item=[...document.querySelectorAll('#page-admissions .faq-item')].find(f=>f.textContent.includes('transport')); item?.scrollIntoView({behavior:'smooth',block:'center'}); item?.classList.add('open'); },300); }, keywords:'transport bus faq'},
+];
+
+const cmdk = document.getElementById('cmdk');
+const cmdkInput = document.getElementById('cmdkInput');
+const cmdkResults = document.getElementById('cmdkResults');
+let cmdkActiveIndex = 0;
+let cmdkFiltered = [];
+
+function openCmdk(){
+  cmdk.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  cmdkInput.value = '';
+  renderCmdk('');
+  setTimeout(()=>cmdkInput.focus(), 50);
+}
+function closeCmdk(){
+  cmdk.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function renderCmdk(query){
+  const q = query.toLowerCase().trim();
+  cmdkFiltered = commands.filter(c=>{
+    if(!q) return true;
+    return (c.label + ' ' + c.desc + ' ' + (c.keywords||'')).toLowerCase().includes(q);
+  });
+  cmdkActiveIndex = 0;
+  if(!cmdkFiltered.length){
+    cmdkResults.innerHTML = `<div class="cmdk-empty">No results for "${query}"</div>`;
+    return;
+  }
+  // Group by type
+  const groups = {};
+  cmdkFiltered.forEach(c=>{ (groups[c.type] = groups[c.type] || []).push(c); });
+  let html = '';
+  let idx = 0;
+  Object.keys(groups).forEach(type=>{
+    html += `<div class="cmdk-group-label">${type}</div>`;
+    groups[type].forEach(c=>{
+      const sel = idx === cmdkActiveIndex ? 'true' : 'false';
+      html += `<div class="cmdk-item" role="option" aria-selected="${sel}" data-index="${idx}" onclick="selectCmdk(${idx})">
+        <div class="cmdk-item-icon">${c.icon}</div>
+        <div class="cmdk-item-content"><div class="cmdk-item-label">${c.label}</div><div class="cmdk-item-desc">${c.desc}</div></div>
+        <div class="cmdk-item-type">${c.type}</div>
+      </div>`;
+      idx++;
+    });
+  });
+  cmdkResults.innerHTML = html;
+}
+function selectCmdk(i){
+  const c = cmdkFiltered[i];
+  if(!c) return;
+  closeCmdk();
+  setTimeout(()=>c.action(), 100);
+}
+cmdkInput?.addEventListener('input', e=>renderCmdk(e.target.value));
+cmdkInput?.addEventListener('keydown', e=>{
+  if(e.key === 'ArrowDown'){
+    e.preventDefault();
+    cmdkActiveIndex = Math.min(cmdkActiveIndex + 1, cmdkFiltered.length - 1);
+    updateCmdkSelection();
+  } else if(e.key === 'ArrowUp'){
+    e.preventDefault();
+    cmdkActiveIndex = Math.max(cmdkActiveIndex - 1, 0);
+    updateCmdkSelection();
+  } else if(e.key === 'Enter'){
+    e.preventDefault();
+    selectCmdk(cmdkActiveIndex);
+  } else if(e.key === 'Escape'){
+    closeCmdk();
+  }
+});
+function updateCmdkSelection(){
+  cmdkResults.querySelectorAll('.cmdk-item').forEach((el,i)=>{
+    el.setAttribute('aria-selected', i===cmdkActiveIndex ? 'true' : 'false');
+    if(i===cmdkActiveIndex) el.scrollIntoView({block:'nearest'});
+  });
+}
+
+/* Keyboard shortcuts */
+document.addEventListener('keydown', e=>{
+  // Cmd/Ctrl+K to open
+  if((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k'){
+    e.preventDefault();
+    cmdk.classList.contains('open') ? closeCmdk() : openCmdk();
+  }
+  // / to open if not typing
+  if(e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName) && !cmdk.classList.contains('open')){
+    e.preventDefault();
+    openCmdk();
+  }
+  // Esc to close modal/cmdk
+  if(e.key === 'Escape'){
+    if(cmdk.classList.contains('open')) closeCmdk();
+    if(document.getElementById('tourModal').classList.contains('open')) closeModal();
+  }
+});
+
+/* ============================================
+   OUTSIDE CLICK
+   ============================================ */
+document.addEventListener('click', e=>{
+  const menu = document.getElementById('navMenu');
+  const toggle = document.querySelector('.nav-toggle');
+  if(menu.classList.contains('open') && !menu.contains(e.target) && !toggle.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
+
+/* ============================================
+   INIT
+   ============================================ */
+window.addEventListener('load', ()=>{
+  handleHash();
+  observeReveals();
+  onScroll();
+});
+</script>
+</body>
+</html>
